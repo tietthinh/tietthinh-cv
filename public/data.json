@@ -1,0 +1,165 @@
+{
+  "basicInfo": {
+    "name": "Tran Tiet Thinh",
+    "dob": "12/10/1995",
+    "email": "tietthinh@gmail.com",
+    "education": "VNUHCM - HCMUS",
+    "address": "HCM City",
+    "avatarUrl": "/img/avatar.jpeg"
+  },
+  "tags": [
+    {
+      "id": "angularjs",
+      "name": "AngularJS"
+    },
+    {
+      "id": "angular",
+      "name": "Angular"
+    },
+    {
+      "id": "react",
+      "name": "ReactJS"
+    }
+  ],
+  "projects": [
+    {
+      "timeStart": "2016-08-01",
+      "timeEnd": "2017-06-01",
+      "name": "JobApps",
+      "domain": ["Recruitment", "Mobile App"],
+      "company": "ePlus Solution",
+      "companyLogo": "https://media.licdn.com/dms/image/v2/C4E0BAQHxZVsDaGPOGg/company-logo_200_200/company-logo_200_200/0/1635956316838/eplus_vn_logo?e=1763596800&v=beta&t=i4O5GW1M51z1KqAI0ICzqXofmOf5YL-2xP_f3DH-y_k",
+      "description": "Developed a hybrid mobile app enabling job seekers to find suitable positions and employers to discover qualified candidates.",
+      "techstack": ["Ionic 2", "MSSQL", "PHP"],
+      "position": "Frontend Web & Mobile App Developer",
+      "role": "Designed and implemented user interfaces for mobile and web platforms."
+    },
+    {
+      "timeStart": "2017-06-01",
+      "timeEnd": "2017-10-01",
+      "name": "B-Dubs Minigame",
+      "domain": ["Event", "Gaming"],
+      "company": "Banvien Ltd",
+      "companyLogo": "https://media.licdn.com/dms/image/v2/C510BAQGNFiyeUGzbag/company-logo_200_200/company-logo_200_200/0/1630633310396/ban_vien_co_logo?e=1763596800&v=beta&t=uzPe7VSYVABrCBuiwv5-H84k6ZeXQr_6NGMLqBOgAGw",
+      "description": "Created a soccer penalty minigame using Canvas and jQuery for a promotional event.",
+      "techstack": ["HTML5", "jQuery", "MySQL", "PHP"],
+      "position": "Frontend Web Developer",
+      "role": "Built interactive game features and ensured responsive design."
+    },
+    {
+      "timeStart": "2017-10-01",
+      "timeEnd": "2017-12-01",
+      "name": "V-Key Trusted Platform",
+      "domain": ["Security", "SDK Management"],
+      "company": "Banvien Ltd",
+      "companyLogo": "https://media.licdn.com/dms/image/v2/C510BAQGNFiyeUGzbag/company-logo_200_200/company-logo_200_200/0/1630633310396/ban_vien_co_logo?e=1763596800&v=beta&t=uzPe7VSYVABrCBuiwv5-H84k6ZeXQr_6NGMLqBOgAGw",
+      "description": "Developed a web management console for internal users to manage SDK packages and user accounts.",
+      "techstack": ["ReactJS", "redux-observable", "MongoDB", "NodeJS"],
+      "position": "Frontend Web Developer",
+      "role": "Implemented dynamic dashboards and user management features."
+    },
+    {
+      "timeStart": "2018-06-01",
+      "timeEnd": "2018-12-01",
+      "name": "PanL Desk Manager",
+      "domain": ["Workspace Booking", "Mobile App"],
+      "company": "Banvien Ltd",
+      "companyLogo": "https://media.licdn.com/dms/image/v2/C510BAQGNFiyeUGzbag/company-logo_200_200/company-logo_200_200/0/1630633310396/ban_vien_co_logo?e=1763596800&v=beta&t=uzPe7VSYVABrCBuiwv5-H84k6ZeXQr_6NGMLqBOgAGw",
+      "description": "Built a hybrid mobile app for booking desks or rooms with map and time-based selection features.",
+      "techstack": ["Ionic 3", "NodeJS", "MongoDB"],
+      "position": "Mobile Developer",
+      "role": "Developed booking flows and integrated map-based UI."
+    },
+    {
+      "timeStart": "2018-12-01",
+      "timeEnd": "2019-03-01",
+      "name": "FC SmartShopper",
+      "domain": ["Retail", "Promotion"],
+      "company": "Banvien Ltd",
+      "companyLogo": "https://media.licdn.com/dms/image/v2/C510BAQGNFiyeUGzbag/company-logo_200_200/company-logo_200_200/0/1630633310396/ban_vien_co_logo?e=1763596800&v=beta&t=uzPe7VSYVABrCBuiwv5-H84k6ZeXQr_6NGMLqBOgAGw",
+      "description": "Created a mobile app for Friesland Campina customers to engage in promotional campaigns and win prizes.",
+      "techstack": ["React Native", "Java Spring", "PostgreSQL"],
+      "position": "Mobile Developer",
+      "role": "Implemented campaign logic and user engagement features."
+    },
+    {
+      "timeStart": "2019-03-01",
+      "timeEnd": "2020-03-01",
+      "name": "Prudential Outsourcing",
+      "domain": ["Insurance", "Risk Management"],
+      "company": "Banvien Ltd",
+      "companyLogo": "https://media.licdn.com/dms/image/v2/C510BAQGNFiyeUGzbag/company-logo_200_200/company-logo_200_200/0/1630633310396/ban_vien_co_logo?e=1763596800&v=beta&t=uzPe7VSYVABrCBuiwv5-H84k6ZeXQr_6NGMLqBOgAGw",
+      "description": "Built a complaint management system for tracking agency risks and penalties with user-friendly UI.",
+      "techstack": ["Angular", "Java", "Oracle"],
+      "position": "Frontend Developer",
+      "role": "Designed responsive interfaces and optimized user experience."
+    },
+    {
+      "timeStart": "2020-03-01",
+      "timeEnd": "2020-07-01",
+      "name": "Topenland",
+      "domain": ["Real Estate", "E-commerce"],
+      "company": "NashTech",
+      "companyLogo": "https://media.licdn.com/dms/image/v2/D4E0BAQH2XkGtzxSbvg/company-logo_200_200/company-logo_200_200/0/1720166077022/nashtech_global_logo?e=1763596800&v=beta&t=6u2Cc2OCVpm3_YHDUl23XYD5oEaIvqZrt_Ljf7wRoU8",
+      "description": "Developed a B2B real estate e-commerce ecosystem using modern frontend and mobile technologies.",
+      "techstack": [".NET", "ReactJS", "React Native", "NextJS", "GraphQL"],
+      "position": "Frontend/Mobile Developer",
+      "role": "Built scalable components and integrated GraphQL APIs."
+    },
+    {
+      "timeStart": "2020-07-01",
+      "timeEnd": "2021-09-01",
+      "name": "GFT Vietnam",
+      "domain": ["Banking", "Payment Services"],
+      "company": "NashTech",
+      "companyLogo": "https://media.licdn.com/dms/image/v2/D4E0BAQH2XkGtzxSbvg/company-logo_200_200/company-logo_200_200/0/1720166077022/nashtech_global_logo?e=1763596800&v=beta&t=6u2Cc2OCVpm3_YHDUl23XYD5oEaIvqZrt_Ljf7wRoU8",
+      "description": "Worked on a banking system focusing on payment service flows and mobile experience.",
+      "techstack": ["React Native", "GraphQL"],
+      "position": "Mobile Developer",
+      "role": "Developed secure and intuitive payment workflows."
+    },
+    {
+      "timeStart": "2021-09-01",
+      "timeEnd": "2022-03-03",
+      "name": "Drivepivotal",
+      "domain": ["Automotive", "KYC"],
+      "company": "NashTech",
+      "companyLogo": "https://media.licdn.com/dms/image/v2/D4E0BAQH2XkGtzxSbvg/company-logo_200_200/company-logo_200_200/0/1720166077022/nashtech_global_logo?e=1763596800&v=beta&t=6u2Cc2OCVpm3_YHDUl23XYD5oEaIvqZrt_Ljf7wRoU8",
+      "description": "Built KYC onboarding flow for Land Rover and Jaguar car lending services.",
+      "techstack": ["React", "Salesforce"],
+      "position": "Frontend Developer",
+      "role": "Integrated Salesforce APIs and designed KYC forms."
+    },
+    {
+      "timeStart": "2022-03-01",
+      "timeEnd": "2022-07-01",
+      "name": "ClubSpark",
+      "domain": ["Sport", "KYC"],
+      "company": "NashTech",
+      "companyLogo": "https://media.licdn.com/dms/image/v2/D4E0BAQH2XkGtzxSbvg/company-logo_200_200/company-logo_200_200/0/1720166077022/nashtech_global_logo?e=1763596800&v=beta&t=6u2Cc2OCVpm3_YHDUl23XYD5oEaIvqZrt_Ljf7wRoU8",
+      "description": "Develop a new UI for an existing product focused on organize and manage tennis courses and tournaments.",
+      "techstack": ["React", "Salesforce"],
+      "position": "Frontend Developer",
+      "role": "Integrated Salesforce APIs and designed KYC forms."
+    },
+    {
+      "timeStart": "2022-06-01",
+      "timeEnd": null,
+      "name": "Internet Banking",
+      "domain": ["Banking", "Micro-Frontend"],
+      "company": "NAB Innovation Center Vietnam",
+      "companyLogo": "https://media.licdn.com/dms/image/v2/D560BAQEpfH1XRQvlXQ/company-logo_200_200/B56Zg0mZ6gG4AM-/0/1753229140372/nab_logo?e=1763596800&v=beta&t=pD0vbQBfHiottu8f7wn7SZqVrQHHzffyy8dydlS1nb4",
+      "description": "Maintains legacy banking applications and develops new micro-frontend miniapps for seamless customer experience.",
+      "techstack": [
+        "React",
+        "JavaScript",
+        "TypeScript",
+        "NodeJS",
+        "GraphQL",
+        "REST API"
+      ],
+      "position": "Senior Software Engineer",
+      "role": "Leads frontend development and micro-frontend architecture."
+    }
+  ]
+}
