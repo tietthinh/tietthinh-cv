@@ -29,7 +29,6 @@ export const getDuration = (fromDate: string, toDate: string | null) => {
 };
 
 export const buildDurationText = ({
-  days,
   months,
   years,
 }: {
@@ -40,7 +39,6 @@ export const buildDurationText = ({
   let result = "";
   if (years > 0) result += ` ${years} ${years > 1 ? "years" : "year"}`;
   if (months > 0) result += ` ${months} ${months > 1 ? "months" : "month"}`;
-  if (days > 0) result += ` ${days} ${days > 1 ? "days" : "day"}`;
 
   return result.trim();
 };

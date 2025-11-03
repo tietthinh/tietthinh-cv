@@ -3,7 +3,7 @@ import { Main } from "@/components/Main/Main";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center font-sans bg-black">
+    <div className="flex min-h-screen items-center font-open bg-black">
       <main className="flex min-h-screen w-full bg-black sm:items-start">
         <Main
           basicInfo={data.basicInfo}

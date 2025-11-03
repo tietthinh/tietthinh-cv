@@ -1,6 +1,8 @@
+"use client";
+
 import type { ProjectsProps, Project } from "@/types";
 import Image from "next/image";
-import { buildDurationText, formatDate, getDuration } from "./helper";
+import { buildDurationText, formatDate, getDuration } from "../helper";
 import { Tag } from "../Tag/Tag";
 const Project: React.FC<Project> = ({
   timeStart,
@@ -18,7 +20,7 @@ const Project: React.FC<Project> = ({
   const end = formatDate(timeEnd);
   const durationText = buildDurationText(getDuration(timeStart, timeEnd));
   return (
-    <div className="border rounded-lg border-white p-3">
+    <div className="border rounded-lg border-white border-l-8 border-l-yellow-300 p-3  min-h-[360px]">
       <div>
         <h2 className="text-4xl">{name}</h2>
       </div>
@@ -39,7 +41,7 @@ const Project: React.FC<Project> = ({
       <div className="mt-2.5">
         Techstack:{" "}
         {techstack.map((stack) => (
-          <Tag key={stack} name={stack} id={stack} />
+          <Tag key={stack} name={stack} id={stack} onClick={console.log} />
         ))}
       </div>
       <div className="mt-2.5">Position: {position}</div>
@@ -53,10 +55,12 @@ export const Projects: React.FC<ProjectsProps> = ({ projectProps }) => {
   return (
     <div className="projects">
       <h1 className="text-3xl mb-5">Projects</h1>
-      <div className="grid grid-cols-2 gap-5 px-5">
-        {projectProps.map((project) => (
-          <Project key={project.name} {...project} />
-        ))}
+      <div className="flex justify-center">
+        <div className="grid grid-cols-2 gap-5 px-5">
+          {projectProps.map((project) => (
+            <Project key={project.name} {...project} />
+          ))}
+        </div>
       </div>
     </div>
   );

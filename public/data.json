@@ -5,7 +5,8 @@
     "email": "tietthinh@gmail.com",
     "education": "VNUHCM - HCMUS",
     "address": "HCM City",
-    "avatarUrl": "/img/avatar.jpeg"
+    "avatarUrl": "/img/avatar.jpeg",
+    "github": "https://github.com/tietthinh/tietthinh.github.io"
   },
   "tags": [
     {
@@ -120,7 +121,7 @@
     },
     {
       "timeStart": "2021-09-01",
-      "timeEnd": "2022-03-03",
+      "timeEnd": "2022-03-01",
       "name": "Drivepivotal",
       "domain": ["Automotive", "KYC"],
       "company": "NashTech",
@@ -159,7 +160,7 @@
         "REST API"
       ],
       "position": "Senior Software Engineer",
-      "role": "Leads frontend development and micro-frontend architecture."
+      "role": "Handle frontend development and abstract micro-frontend architecture."
     }
   ]
 }

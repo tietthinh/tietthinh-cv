@@ -12,6 +12,7 @@ export interface BasicInfoProps {
   email: string;
   education: string;
   address: string;
+  github: string
 }
 
 export interface MainProps {
