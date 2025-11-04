@@ -18,7 +18,7 @@ const FieldValue: React.FC<{ title: string; value: ReactNode }> = ({
   value,
 }) => {
   return (
-    <p className="py-1">
+    <p className="py-1.5">
       <Title>{title}</Title>
       <Value>{value}</Value>
     </p>
@@ -46,9 +46,9 @@ const Project: React.FC<Project> = ({
         <h2 className="text-4xl">{name}</h2>
       </div>
       <div className="my-2">
-        {start} &nbsp;&nbsp;-&nbsp;&nbsp; {end} &nbsp;({durationText})
+        {start} &nbsp;to&nbsp; {end} &nbsp;({durationText})
       </div>
-      <div className="flex items-center">
+      <div className="flex items-center my-6">
         <Image
           src={companyLogo}
           alt={company}
@@ -58,7 +58,7 @@ const Project: React.FC<Project> = ({
         />
         <h3 className="text-3xl ml-2">{company}</h3>
       </div>
-      <dl>
+      <div>
         <FieldValue title="Domain" value={domain.join(", ")} />
         <FieldValue
           title="Techstack"
@@ -69,7 +69,7 @@ const Project: React.FC<Project> = ({
         <FieldValue title="Position" value={position} />
         <FieldValue title="Role" value={role} />
         <FieldValue title="Description" value={description} />
-      </dl>
+      </div>
     </div>
   );
 };

@@ -42,19 +42,19 @@ export const BasicInfo: React.FC<BasicInfoProps> = ({
         <div className="flex flex-col md:flex-row">
           <div className="flex flex-col justify-between md:p-8">
             <div className="flex mb-2 md:my-0">
-              <Bars3Icon width={36} />
+              <Bars3Icon className="h-7 w-7 md:h-9 md:w-9" />
               <h3 className="text-white text-xl md:text-3xl ml-2 font-bold">
                 {name}
               </h3>
             </div>
             <div className="flex mb-2 md:my-0">
-              <CalendarDaysIcon width={36} />
+              <CalendarDaysIcon className="h-7 w-7 md:h-9 md:w-9" />
               <h3 className="text-white text-xl md:text-3xl ml-2 font-bold">
                 {dobYear}
               </h3>
             </div>
             <div className="flex mb-2 md:my-0">
-              <HomeIcon width={36} />
+              <HomeIcon className="h-7 w-7 md:h-9 md:w-9" />
               <h3 className="text-white text-xl md:text-3xl ml-2 font-bold">
                 {address}
               </h3>
@@ -62,18 +62,18 @@ export const BasicInfo: React.FC<BasicInfoProps> = ({
           </div>
           <div className="flex flex-col justify-between md:p-8">
             <div className="flex mb-2 md:my-0">
-              <AcademicCapIcon width={36} />
+              <AcademicCapIcon className="h-7 w-7 md:h-9 md:w-9" />
               <h3 className="text-white text-xl md:text-3xl ml-2 font-bold">
                 {education}
               </h3>
             </div>
             <div className="flex mb-2 md:my-0">
-              <AtSymbolIcon width={36} />
+              <AtSymbolIcon className="h-7 w-7 md:h-9 md:w-9" />
               <h3 className="text-white text-xl md:text-3xl ml-2 font-bold">
                 {email}
               </h3>
             </div>
-            <div className="flex mb-2 md:my-0">
+            <div className="flex mb-2 md:my-0 items-center">
               <Image
                 src="/github-logo.png"
                 alt="Github"
@@ -82,7 +82,9 @@ export const BasicInfo: React.FC<BasicInfoProps> = ({
                 priority
               />
               <h3 className="text-white text-xl md:text-3xl ml-2 font-bold">
-                <a target="_blank" href={github}>GitHub</a>
+                <a target="_blank" href={github}>
+                  GitHub
+                </a>
               </h3>
             </div>
           </div>
