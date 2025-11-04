@@ -114,10 +114,10 @@
       "domain": ["Banking", "Payment Services"],
       "company": "NashTech",
       "companyLogo": "https://media.licdn.com/dms/image/v2/D4E0BAQH2XkGtzxSbvg/company-logo_200_200/company-logo_200_200/0/1720166077022/nashtech_global_logo?e=1763596800&v=beta&t=6u2Cc2OCVpm3_YHDUl23XYD5oEaIvqZrt_Ljf7wRoU8",
-      "description": "Worked on a banking system focusing on payment service flows and mobile experience.",
+      "description": "Work with HK team on banking system which focusing on payment service such as cash transfer, bill payment",
       "techstack": ["React Native", "GraphQL"],
       "position": "Mobile Developer",
-      "role": "Developed secure and intuitive payment workflows."
+      "role": "Developed secure and intuitive payment, money transfer workflows."
     },
     {
       "timeStart": "2021-09-01",
@@ -150,7 +150,7 @@
       "domain": ["Banking", "Micro-Frontend"],
       "company": "NAB Innovation Center Vietnam",
       "companyLogo": "https://media.licdn.com/dms/image/v2/D560BAQEpfH1XRQvlXQ/company-logo_200_200/B56Zg0mZ6gG4AM-/0/1753229140372/nab_logo?e=1763596800&v=beta&t=pD0vbQBfHiottu8f7wn7SZqVrQHHzffyy8dydlS1nb4",
-      "description": "Maintains legacy banking applications and develops new micro-frontend miniapps for seamless customer experience.",
+      "description": "Working with Australian team to maintains legacy banking applications and develops new micro-frontend miniapps for seamless customer experience.",
       "techstack": [
         "React",
         "JavaScript",

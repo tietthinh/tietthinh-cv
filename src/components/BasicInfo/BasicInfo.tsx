@@ -23,7 +23,7 @@ export const BasicInfo: React.FC<BasicInfoProps> = ({
 
   return (
     <div>
-      <div className="flex flex-col md:flex-row">
+      <div className="flex flex-col  md:flex-row">
         <div className="flex flex-col items-center">
           <Image
             src={avatarUrl}
@@ -39,49 +39,50 @@ export const BasicInfo: React.FC<BasicInfoProps> = ({
             </span>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row">
-          <div className="flex flex-col justify-between md:p-8">
-            <div className="flex mb-2 md:my-0">
-              <Bars3Icon className="h-7 w-7 md:h-9 md:w-9" />
-              <h3 className="text-white text-xl md:text-3xl ml-2 font-bold">
+        <div className="flex flex-col lg:flex-row ml-12 lg:ml-0">
+          <div className="flex flex-col justify-between lg:p-8">
+            <div className="flex mb-2 lg:my-0">
+              <Bars3Icon className="h-7 w-7 lg:h-9 lg:w-9" />
+              <h3 className="text-white text-xl lg:text-3xl ml-2 font-bold">
                 {name}
               </h3>
             </div>
-            <div className="flex mb-2 md:my-0">
-              <CalendarDaysIcon className="h-7 w-7 md:h-9 md:w-9" />
-              <h3 className="text-white text-xl md:text-3xl ml-2 font-bold">
+            <div className="flex mb-2 lg:my-0">
+              <CalendarDaysIcon className="h-7 w-7 lg:h-9 lg:w-9" />
+              <h3 className="text-white text-xl lg:text-3xl ml-2 font-bold">
                 {dobYear}
               </h3>
             </div>
-            <div className="flex mb-2 md:my-0">
-              <HomeIcon className="h-7 w-7 md:h-9 md:w-9" />
-              <h3 className="text-white text-xl md:text-3xl ml-2 font-bold">
+            <div className="flex mb-2 lg:my-0">
+              <HomeIcon className="h-7 w-7 lg:h-9 lg:w-9" />
+              <h3 className="text-white text-xl lg:text-3xl ml-2 font-bold">
                 {address}
               </h3>
             </div>
           </div>
-          <div className="flex flex-col justify-between md:p-8">
-            <div className="flex mb-2 md:my-0">
-              <AcademicCapIcon className="h-7 w-7 md:h-9 md:w-9" />
-              <h3 className="text-white text-xl md:text-3xl ml-2 font-bold">
+          <div className="flex flex-col justify-between lg:p-8">
+            <div className="flex mb-2 lg:my-0">
+              <AcademicCapIcon className="h-7 w-7 lg:h-9 lg:w-9" />
+              <h3 className="text-white text-xl lg:text-3xl ml-2 font-bold">
                 {education}
               </h3>
             </div>
-            <div className="flex mb-2 md:my-0">
-              <AtSymbolIcon className="h-7 w-7 md:h-9 md:w-9" />
-              <h3 className="text-white text-xl md:text-3xl ml-2 font-bold">
-                {email}
+            <div className="flex mb-2 lg:my-0">
+              <AtSymbolIcon className="h-7 w-7 lg:h-9 lg:w-9" />
+              <h3 className="text-white text-xl lg:text-3xl ml-2 font-bold underline">
+                <a href={`mailto:${email}`}>{email}</a>
               </h3>
             </div>
-            <div className="flex mb-2 md:my-0 items-center">
+            <div className="flex mb-2 lg:my-0 items-center">
               <Image
                 src="/github-logo.png"
                 alt="Github"
                 width={36}
                 height={36}
+                className="h-7 w-7 lg:h-9 lg:w-9"
                 priority
               />
-              <h3 className="text-white text-xl md:text-3xl ml-2 font-bold">
+              <h3 className="text-white text-xl lg:text-3xl ml-2 font-bold">
                 <a target="_blank" href={github}>
                   GitHub
                 </a>

@@ -1,6 +1,7 @@
 import { MainProps } from "@/types";
 import { BasicInfo } from "../BasicInfo/BasicInfo";
 import { Projects } from "../Project/Project";
+import { Footer } from "../Footer/Footer";
 
 export const Main: React.FC<MainProps> = ({ basicInfo, projects }) => {
   return (
@@ -8,6 +9,7 @@ export const Main: React.FC<MainProps> = ({ basicInfo, projects }) => {
       <BasicInfo {...basicInfo} />
       <div className="divider border border-b my-4 w-full" />
       <Projects projectProps={projects} />
+      <Footer />
     </div>
   );
 };
