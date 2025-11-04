@@ -7,7 +7,7 @@ import {
 } from "@heroicons/react/24/solid";
 import { Bars3Icon } from "@heroicons/react/24/solid";
 import Image from "next/image";
-import { buildDurationText, getDuration } from "../helper";
+import { getDuration } from "../helper";
 
 export const BasicInfo: React.FC<BasicInfoProps> = ({
   avatarUrl,
@@ -19,10 +19,11 @@ export const BasicInfo: React.FC<BasicInfoProps> = ({
   github,
 }) => {
   const { years } = getDuration("2021-6-3", null);
+  const dobYear = new Date(dob).getFullYear();
 
   return (
     <div>
-      <div className="flex">
+      <div className="flex flex-col md:flex-row">
         <div className="flex flex-col items-center">
           <Image
             src={avatarUrl}
@@ -38,40 +39,52 @@ export const BasicInfo: React.FC<BasicInfoProps> = ({
             </span>
           </div>
         </div>
-        <div className="flex flex-col justify-between p-8">
-          <div className="flex">
-            <Bars3Icon width={36} />
-            <h3 className="text-white text-3xl ml-2 font-bold">{name}</h3>
+        <div className="flex flex-col md:flex-row">
+          <div className="flex flex-col justify-between md:p-8">
+            <div className="flex mb-2 md:my-0">
+              <Bars3Icon width={36} />
+              <h3 className="text-white text-xl md:text-3xl ml-2 font-bold">
+                {name}
+              </h3>
+            </div>
+            <div className="flex mb-2 md:my-0">
+              <CalendarDaysIcon width={36} />
+              <h3 className="text-white text-xl md:text-3xl ml-2 font-bold">
+                {dobYear}
+              </h3>
+            </div>
+            <div className="flex mb-2 md:my-0">
+              <HomeIcon width={36} />
+              <h3 className="text-white text-xl md:text-3xl ml-2 font-bold">
+                {address}
+              </h3>
+            </div>
           </div>
-          <div className="flex">
-            <CalendarDaysIcon width={36} />
-            <h3 className="text-white text-3xl ml-2 font-bold">{dob}</h3>
-          </div>
-          <div className="flex">
-            <HomeIcon width={36} />
-            <h3 className="text-white text-3xl ml-2 font-bold">{address}</h3>
-          </div>
-        </div>
-        <div className="flex flex-col justify-between p-8">
-          <div className="flex">
-            <AcademicCapIcon width={36} />
-            <h3 className="text-white text-3xl ml-2 font-bold">{education}</h3>
-          </div>
-          <div className="flex">
-            <AtSymbolIcon width={36} />
-            <h3 className="text-white text-3xl ml-2 font-bold">{email}</h3>
-          </div>
-          <div className="flex">
-            <Image
-              src="/github-logo.png"
-              alt="Github"
-              width={36}
-              height={36}
-              priority
-            />
-            <h3 className="text-white text-3xl ml-2 font-bold">
-              <a href={github}>GitHub</a>
-            </h3>
+          <div className="flex flex-col justify-between md:p-8">
+            <div className="flex mb-2 md:my-0">
+              <AcademicCapIcon width={36} />
+              <h3 className="text-white text-xl md:text-3xl ml-2 font-bold">
+                {education}
+              </h3>
+            </div>
+            <div className="flex mb-2 md:my-0">
+              <AtSymbolIcon width={36} />
+              <h3 className="text-white text-xl md:text-3xl ml-2 font-bold">
+                {email}
+              </h3>
+            </div>
+            <div className="flex mb-2 md:my-0">
+              <Image
+                src="/github-logo.png"
+                alt="Github"
+                width={36}
+                height={36}
+                priority
+              />
+              <h3 className="text-white text-xl md:text-3xl ml-2 font-bold">
+                <a target="_blank" href={github}>GitHub</a>
+              </h3>
+            </div>
           </div>
         </div>
       </div>
