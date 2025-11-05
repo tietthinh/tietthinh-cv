@@ -1,26 +1,12 @@
-export interface TagProps {
-  name: string;
-  id: string;
-  count?: number;
-  onClick?: (id: string) => void;
-}
-
-export interface BasicInfoProps {
+export interface BasicInfo {
   avatarUrl: string;
   name: string;
   dob: string;
   email: string;
   education: string;
   address: string;
-  github: string
+  github: string;
 }
-
-export interface MainProps {
-  tags: Omit<TagProps, "onClick">[];
-  basicInfo: BasicInfoProps;
-  projects: Project[];
-}
-
 export interface Project {
   timeStart: string;
   timeEnd: string | null;
@@ -34,6 +20,44 @@ export interface Project {
   role: string;
 }
 
+export interface Hobby {
+  name: string;
+  images: { url: string; caption: string }[];
+  description: string;
+}
+export interface Skill {
+  name: string;
+  priority: number;
+  description: number;
+}
+
+// Props zone
+export interface TagProps {
+  name: string;
+  id: string;
+  count?: number;
+  autoColour?: boolean;
+  onClick?: (id: string) => void;
+}
+
+export interface BasicInfoProps {
+  basicInfo: BasicInfo;
+}
+
+export interface HobbyProps {
+  hobbies: Hobby[];
+}
+
 export interface ProjectsProps {
   projectProps: Project[];
+}
+
+export interface SkillsProps {
+  skills: Skill[];
+}
+export interface SectionProps {
+  onCollapse?: () => void;
+  onExpand?: () => void;
+  title: string;
+  titleCaption?: string;
 }

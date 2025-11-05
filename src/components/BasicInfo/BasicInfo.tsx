@@ -10,19 +10,13 @@ import Image from "next/image";
 import { getDuration } from "../helper";
 
 export const BasicInfo: React.FC<BasicInfoProps> = ({
-  avatarUrl,
-  dob,
-  email,
-  name,
-  address,
-  education,
-  github,
+  basicInfo: { avatarUrl, dob, email, name, address, education, github },
 }) => {
   const { years } = getDuration("2021-6-3", null);
   const dobYear = new Date(dob).getFullYear();
 
   return (
-    <div>
+    <section>
       <div className="flex flex-col  md:flex-row">
         <div className="flex flex-col items-center">
           <Image
@@ -30,7 +24,6 @@ export const BasicInfo: React.FC<BasicInfoProps> = ({
             alt="My avatar"
             width={250}
             height={250}
-            priority
           />
           <div>
             <ArrowTurnLeftUpIcon className="inline mb-3" width={24} />
@@ -43,33 +36,27 @@ export const BasicInfo: React.FC<BasicInfoProps> = ({
           <div className="flex flex-col justify-between lg:p-8">
             <div className="flex mb-2 lg:my-0">
               <Bars3Icon className="h-7 w-7 lg:h-9 lg:w-9" />
-              <h3 className="text-white text-xl lg:text-3xl ml-2 font-bold">
-                {name}
-              </h3>
+              <h3 className="text-xl lg:text-3xl ml-2 font-bold">{name}</h3>
             </div>
             <div className="flex mb-2 lg:my-0">
               <CalendarDaysIcon className="h-7 w-7 lg:h-9 lg:w-9" />
-              <h3 className="text-white text-xl lg:text-3xl ml-2 font-bold">
-                {dobYear}
-              </h3>
+              <h3 className="text-xl lg:text-3xl ml-2 font-bold">{dobYear}</h3>
             </div>
             <div className="flex mb-2 lg:my-0">
               <HomeIcon className="h-7 w-7 lg:h-9 lg:w-9" />
-              <h3 className="text-white text-xl lg:text-3xl ml-2 font-bold">
-                {address}
-              </h3>
+              <h3 className=" text-xl lg:text-3xl ml-2 font-bold">{address}</h3>
             </div>
           </div>
           <div className="flex flex-col justify-between lg:p-8">
             <div className="flex mb-2 lg:my-0">
               <AcademicCapIcon className="h-7 w-7 lg:h-9 lg:w-9" />
-              <h3 className="text-white text-xl lg:text-3xl ml-2 font-bold">
+              <h3 className=" text-xl lg:text-3xl ml-2 font-bold">
                 {education}
               </h3>
             </div>
             <div className="flex mb-2 lg:my-0">
               <AtSymbolIcon className="h-7 w-7 lg:h-9 lg:w-9" />
-              <h3 className="text-white text-xl lg:text-3xl ml-2 font-bold underline">
+              <h3 className=" text-xl lg:text-3xl ml-2 font-bold underline">
                 <a href={`mailto:${email}`}>{email}</a>
               </h3>
             </div>
@@ -82,7 +69,7 @@ export const BasicInfo: React.FC<BasicInfoProps> = ({
                 className="h-7 w-7 lg:h-9 lg:w-9"
                 priority
               />
-              <h3 className="text-white text-xl lg:text-3xl ml-2 font-bold">
+              <h3 className=" text-xl lg:text-3xl ml-2 font-bold">
                 <a target="_blank" href={github}>
                   GitHub
                 </a>
@@ -91,6 +78,6 @@ export const BasicInfo: React.FC<BasicInfoProps> = ({
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

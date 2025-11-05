@@ -6,20 +6,72 @@
     "education": "VNUHCM - HCMUS",
     "address": "HCM City",
     "avatarUrl": "/img/avatar.jpeg",
-    "github": "https://github.com/tietthinh/tietthinh.github.io"
+    "github": "https://github.com/tietthinh/tietthinh.github.io",
+    "selfTalk": ""
   },
-  "tags": [
+  "hobbies": [
     {
-      "id": "angularjs",
-      "name": "AngularJS"
+      "name": "Motorcycle Riding",
+      "images": [{ "url": "", "caption": "" }],
+      "description": "I love to ride, research and spend time to maintain the bike. Sometime just a simple coffee time with my friend talking about bike"
     },
     {
-      "id": "angular",
-      "name": "Angular"
+      "name": "Photography",
+      "images": [{ "url": "", "caption": "" }],
+      "description": "Just recently, I'm still an amateur, I have a Canon 77D, not a really good one but still serve me well."
     },
     {
-      "id": "react",
-      "name": "ReactJS"
+      "name": "Touring",
+      "images": [{ "url": "", "caption": "" }],
+      "description": "Sometime I would spend the weekend in some place with sea or mountain view for a BBQ party with my friend or sometime just a simple cup of coffee - of course with my motorcycle"
+    },
+    {
+      "name": "PCMR",
+      "images": [{ "url": "", "caption": "" }],
+      "description": "Its not really about gaming, I really like searching for parts or learn how to assemble the whole PC myself."
+    },
+    {
+      "name": "Gaming",
+      "images": [{ "url": "", "caption": "" }],
+      "description": "I'm PCMR so yeah, I do gaming on it (mostly). Sometime its just a simple game to relax such as solidarity or minesweeper, sometime I do harcore like DMC or Battlefield (no much for now)."
+    }
+  ],
+  "skills": [
+    {
+      "name": "JS",
+      "image": "",
+      "description": "",
+      "priority": true
+    },
+    {
+      "name": "TS",
+      "image": "",
+      "description": "",
+      "priority": true
+    },
+    {
+      "name": "Angular",
+      "image": "",
+      "description": "",
+      "priority": true
+    },
+    {
+      "name": "React",
+      "image": "",
+      "description": "",
+      "priority": true
+    },
+    {
+      "name": "NodeJS",
+      "image": "",
+      "description": "",
+      "priority": true
+    },
+    {
+      "name": "GraphQL",
+      "image": "",
+      "description": "",
+      "priority": true
     }
   ],
   "projects": [
@@ -135,26 +187,28 @@
       "timeStart": "2022-03-01",
       "timeEnd": "2022-07-01",
       "name": "ClubSpark",
-      "domain": ["Sport", "KYC"],
+      "domain": ["Sport"],
       "company": "NashTech",
       "companyLogo": "https://media.licdn.com/dms/image/v2/D4E0BAQH2XkGtzxSbvg/company-logo_200_200/company-logo_200_200/0/1720166077022/nashtech_global_logo?e=1763596800&v=beta&t=6u2Cc2OCVpm3_YHDUl23XYD5oEaIvqZrt_Ljf7wRoU8",
       "description": "Develop a new UI for an existing product focused on organize and manage tennis courses and tournaments.",
-      "techstack": ["React", "Salesforce"],
+      "techstack": ["React", "React Storybook"],
       "position": "Frontend Developer",
-      "role": "Integrated Salesforce APIs and designed KYC forms."
+      "role": "Integrated new UI and feature"
     },
     {
       "timeStart": "2022-06-01",
       "timeEnd": null,
       "name": "Internet Banking",
-      "domain": ["Banking", "Micro-Frontend"],
+      "domain": ["Banking"],
       "company": "NAB Innovation Center Vietnam",
       "companyLogo": "https://media.licdn.com/dms/image/v2/D560BAQEpfH1XRQvlXQ/company-logo_200_200/B56Zg0mZ6gG4AM-/0/1753229140372/nab_logo?e=1763596800&v=beta&t=pD0vbQBfHiottu8f7wn7SZqVrQHHzffyy8dydlS1nb4",
       "description": "Working with Australian team to maintains legacy banking applications and develops new micro-frontend miniapps for seamless customer experience.",
       "techstack": [
         "React",
+        "Jest",
         "JavaScript",
         "TypeScript",
+        "Micro-Frontend",
         "NodeJS",
         "GraphQL",
         "REST API"

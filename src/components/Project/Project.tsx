@@ -5,12 +5,13 @@ import Image from "next/image";
 import { buildDurationText, formatDate, getDuration } from "../helper";
 import { Tag } from "../Tag/Tag";
 import { PropsWithChildren, ReactNode } from "react";
+import { Section } from "../Section/Section";
 
 const Title: React.FC<PropsWithChildren> = ({ children }) => {
   return <span className="font-bold underline">{children}:</span>;
 };
 const Value: React.FC<PropsWithChildren> = ({ children }) => {
-  return <span className="font-medium">&nbsp;{children}</span>;
+  return <span className="ml-2 font-medium">{children}</span>;
 };
 
 const FieldValue: React.FC<{ title: string; value: ReactNode }> = ({
@@ -41,7 +42,7 @@ const Project: React.FC<Project> = ({
   const end = formatDate(timeEnd);
   const durationText = buildDurationText(getDuration(timeStart, timeEnd));
   return (
-    <div className="border rounded-lg border-white border-l-8 border-l-yellow-300 p-3  min-h-[360px]">
+    <div className="border rounded-lg border-white border-l-8 border-l-yellow-500 dark:border-l-yellow-300 p-3  min-h-[360px]">
       <div>
         <h2 className="text-4xl">{name}</h2>
       </div>
@@ -63,7 +64,13 @@ const Project: React.FC<Project> = ({
         <FieldValue
           title="Techstack"
           value={techstack.map((stack) => (
-            <Tag key={stack} name={stack} id={stack} onClick={console.log} />
+            <Tag
+              key={stack}
+              name={stack}
+              id={stack}
+              autoColour
+              onClick={console.log}
+            />
           ))}
         />
         <FieldValue title="Position" value={position} />
@@ -76,15 +83,14 @@ const Project: React.FC<Project> = ({
 
 export const Projects: React.FC<ProjectsProps> = ({ projectProps }) => {
   return (
-    <div className="projects">
-      <h1 className="text-3xl mb-5">Projects</h1>
+    <Section title="Projects" titleCaption="My working history">
       <div className="flex justify-center">
-        <div className="grid xs:grid-cols-1 md:grid-cols-2 gap-5 px-5">
+        <div className="grid xs:grid-cols-1 md:grid-cols-2 gap-5">
           {projectProps.map((project) => (
             <Project key={project.name} {...project} />
           ))}
         </div>
       </div>
-    </div>
+    </Section>
   );
 };
