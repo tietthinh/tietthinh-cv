@@ -83,7 +83,7 @@ const Project: React.FC<Project> = ({
 
 export const Projects: React.FC<ProjectsProps> = ({ projectProps }) => {
   return (
-    <Section title="Projects" titleCaption="My working history">
+    <Section title="Projects" titleCaption="My working history" collapsible>
       <div className="flex justify-center">
         <div className="grid xs:grid-cols-1 md:grid-cols-2 gap-5">
           {projectProps.map((project) => (

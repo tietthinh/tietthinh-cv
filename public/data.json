@@ -3,7 +3,7 @@
     "name": "Tran Tiet Thinh",
     "dob": "12/10/1995",
     "email": "tietthinh@gmail.com",
-    "education": "VNUHCM - HCMUS",
+    "education": "HCMUS College Degree",
     "address": "HCM City",
     "avatarUrl": "/img/avatar.jpeg",
     "github": "https://github.com/tietthinh/tietthinh.github.io",
@@ -39,38 +39,38 @@
   "skills": [
     {
       "name": "JS",
-      "image": "",
-      "description": "",
+      "image": "https://www.svgrepo.com/show/303206/javascript-logo.svg",
+      "description": "I get used to JS since 2014 where I self-taught most of the time. I really fond of JS at that time, espectially when I saw people doing magic-like stuff with jQuery, turn the whole website into a whole new level of UI and UX. Then its come to ECMA versions, I'm still watching for them closely.",
       "priority": true
     },
     {
       "name": "TS",
-      "image": "",
-      "description": "",
+      "image": "https://www.svgrepo.com/show/354478/typescript-icon.svg",
+      "description": "I love JS, and I spend lots of time to understand it, and from there I learn the pros and cons of JS. From the perspective of a strict OOP learner at that time, JS has countless cons to me. And thats where TypeScript come in and solve it for me. It does not like 100% fixing everything, but some major problem is solve, and I love the way Microsoft really listen to the developer to improve and enhance it. At least until now I'm still TypeScript-ing everyday",
       "priority": true
     },
     {
       "name": "Angular",
-      "image": "",
-      "description": "",
+      "image": "https://www.svgrepo.com/show/353396/angular-icon.svg",
+      "description": "My first-ever JS framework, JS was a plain interpret script so when the first time I'm getting used to AngularJS its was a heaven, for the first time its has a rule to follow, a concept to develop. Then come angular 2, my heaven was upgraded with OOP-like concept. Although I'm not working with it as much as I used to but still love the concept, the capable, how it can scale up the application.",
       "priority": true
     },
     {
       "name": "React",
-      "image": "",
-      "description": "",
+      "image": "https://www.svgrepo.com/show/355190/reactjs.svg",
+      "description": "2017 is the first time I use ReactJS, still JS but I managed to learn the concept, the code flow. I also learn about state-management concept and library like Redux, redux-observable (guess no one using it anymore). Since then I started to expand things, React native (I once was an Android developer too), React functional component,...",
       "priority": true
     },
     {
       "name": "NodeJS",
-      "image": "",
-      "description": "",
+      "image": "https://www.svgrepo.com/show/303266/nodejs-icon-logo.svg",
+      "description": "Same year 2017 I learnt NodeJS, learn about how it handle with workers, asynchronous block, etc. Later on I started working on ExpressJS, Kraken,... Ultimately NestJS, Angular-ish, but for Backend - with TypeScript of course.",
       "priority": true
     },
     {
       "name": "GraphQL",
-      "image": "",
-      "description": "",
+      "image": "https://www.svgrepo.com/show/353834/graphql.svg",
+      "description": "Its not gonna replace REST API!",
       "priority": true
     }
   ],

@@ -24,6 +24,7 @@ export const Hobbies: React.FC<HobbyProps> = ({ hobbies }) => {
     <Section
       title="Hobbies"
       titleCaption="Where you get to know more about me beside works"
+      collapsible
     >
       {hobbies.map((hobby) => {
         return <Hobby key={hobby.name} {...hobby} />;

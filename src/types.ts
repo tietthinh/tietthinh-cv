@@ -27,8 +27,9 @@ export interface Hobby {
 }
 export interface Skill {
   name: string;
-  priority: number;
-  description: number;
+  priority: boolean;
+  image: string;
+  description: string;
 }
 
 // Props zone
@@ -60,4 +61,5 @@ export interface SectionProps {
   onExpand?: () => void;
   title: string;
   titleCaption?: string;
+  collapsible?: boolean;
 }

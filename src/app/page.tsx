@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer/Footer";
 import { Projects } from "@/components/Project/Project";
 import data from "../../public/data.json";
 import { Hobbies } from "@/components/Hobbies/Hobbies";
+import { Skills } from "@/components/Skills/Skills";
 
 const Divider: React.FC = () => (
   <div className="divider border border-b my-8 w-full" />
@@ -14,6 +15,8 @@ export default function Home() {
       <main className="flex min-h-screen bg-gray-300 dark:bg-black sm:items-start">
         <div className="w-full p-4 md:p-12">
           <BasicInfo basicInfo={data.basicInfo} />
+          <Divider />
+          <Skills skills={data.skills} />
           <Divider />
           <Projects projectProps={data.projects} />
           <Divider />
