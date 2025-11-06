@@ -11,8 +11,8 @@ const Divider: React.FC = () => (
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center font-open bg-gray-150 dark:bg-black">
-      <main className="flex min-h-screen bg-gray-300 dark:bg-black sm:items-start">
+    <div className="flex min-h-screen items-center font-open bg-gray-100 dark:bg-black">
+      <main className="flex min-h-screen bg-gray-100 dark:bg-black sm:items-start">
         <div className="w-full p-4 md:p-12">
           <BasicInfo basicInfo={data.basicInfo} />
           <Divider />
