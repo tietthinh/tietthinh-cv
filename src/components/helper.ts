@@ -14,6 +14,7 @@ const monthMap: { [x in number]: string } = {
 };
 
 export const formatDate = (dateString: string | null) => {
+  if(!dateString) return 'Now'
   const date = new Date(dateString || new Date());
   const month = date.getMonth() + 1;
   const year = date.getFullYear();

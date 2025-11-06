@@ -40,13 +40,13 @@
     {
       "name": "JS",
       "image": "https://www.svgrepo.com/show/303206/javascript-logo.svg",
-      "description": "I get used to JS since 2014 where I self-taught most of the time. I really fond of JS at that time, espectially when I saw people doing magic-like stuff with jQuery, turn the whole website into a whole new level of UI and UX. Then its come to ECMA versions, I'm still watching for them closely.",
+      "description": "I've been using JavaScript since 2014, mostly self-taught. I was really fond of it back then—especially when I saw people doing magic-like things with jQuery, transforming entire websites into a whole new level of UI and UX. Then came the ECMAScript versions, and I've been following them closely ever since.",
       "priority": true
     },
     {
       "name": "TS",
       "image": "https://www.svgrepo.com/show/354478/typescript-icon.svg",
-      "description": "I love JS, and I spent lots of time to understand it, and from there I learn the pros and cons of JS. From the perspective of a strict OOP learner at that time, JS has countless cons to me. And thats where TypeScript come in and solve it for me. It does not like 100% fixing everything, but some major problem is solve, and I love the way Microsoft really listen to the developer to improve and enhance it. At least until now I'm still TypeScript-ing everyday",
+      "description": "I love JavaScript and have spent a lot of time understanding it. Through that journey, I’ve learned its pros and cons. From the perspective of a strict OOP learner back then, JavaScript had countless drawbacks for me. That’s where TypeScript came in and helped solve many of those issues. It doesn’t fix everything, but it addresses some major problems—and I really appreciate how Microsoft listens to developers to continuously improve and enhance it. Even now, I still use TypeScript every day.",
       "priority": true
     },
     {
@@ -206,15 +206,13 @@
       "techstack": [
         "React",
         "Jest",
-        "JavaScript",
         "TypeScript",
-        "Micro-Frontend",
         "NodeJS",
         "GraphQL",
         "REST API"
       ],
       "position": "Senior Software Engineer",
-      "role": "Handle frontend development and abstract micro-frontend architecture."
+      "role": "Handle frontend and bff development."
     }
   ]
 }
