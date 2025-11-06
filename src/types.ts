@@ -22,7 +22,7 @@ export interface Project {
 
 export interface Hobby {
   name: string;
-  images: { url: string; caption: string }[];
+  images: string[];
   description: string;
 }
 export interface Skill {

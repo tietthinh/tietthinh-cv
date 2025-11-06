@@ -42,7 +42,7 @@ const Project: React.FC<Project> = ({
   const end = formatDate(timeEnd);
   const durationText = buildDurationText(getDuration(timeStart, timeEnd));
   return (
-    <div className="border rounded-lg border-white border-l-8 border-l-yellow-500 dark:border-l-yellow-300 p-3  min-h-[360px]">
+    <li className="border rounded-lg border-white border-l-8 border-l-yellow-500 dark:border-l-yellow-300 p-3  min-h-[360px]">
       <div>
         <h2 className="text-4xl">{name}</h2>
       </div>
@@ -77,7 +77,7 @@ const Project: React.FC<Project> = ({
         <FieldValue title="Role" value={role} />
         <FieldValue title="Description" value={description} />
       </div>
-    </div>
+    </li>
   );
 };
 
@@ -85,11 +85,11 @@ export const Projects: React.FC<ProjectsProps> = ({ projectProps }) => {
   return (
     <Section title="Projects" titleCaption="My working history" collapsible>
       <div className="flex justify-center">
-        <div className="grid xs:grid-cols-1 md:grid-cols-2 gap-5">
+        <ul className="grid xs:grid-cols-1 md:grid-cols-2 gap-5">
           {projectProps.map((project) => (
             <Project key={project.name} {...project} />
           ))}
-        </div>
+        </ul>
       </div>
     </Section>
   );

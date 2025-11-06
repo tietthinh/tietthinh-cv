@@ -11,28 +11,28 @@
   },
   "hobbies": [
     {
+      "id": "1",
       "name": "Motorcycle Riding",
-      "images": [{ "url": "", "caption": "" }],
-      "description": "I love to ride, research and spend time to maintain the bike. Sometime just a simple coffee time with my friend talking about bike"
+      "description": "I love to ride, research and spend time to maintain my motorcycle. Sometime just a simple coffee time with my friend talking about bike"
     },
     {
+      "id": "2",
       "name": "Photography",
-      "images": [{ "url": "", "caption": "" }],
-      "description": "Just recently, I'm still an amateur, I have a Canon 77D, not a really good one but still serve me well."
+      "description": "Just recently, I'm still an amateur, I have a Canon 77D and a Insta360 Ace Pro, not a really good one but still serve me well."
     },
     {
+      "id": "3",
       "name": "Touring",
-      "images": [{ "url": "", "caption": "" }],
       "description": "Sometime I would spend the weekend in some place with sea or mountain view for a BBQ party with my friend or sometime just a simple cup of coffee - of course with my motorcycle"
     },
     {
+      "id": "4",
       "name": "PCMR",
-      "images": [{ "url": "", "caption": "" }],
       "description": "Its not really about gaming, I really like searching for parts or learn how to assemble the whole PC myself."
     },
     {
+      "id": "5",
       "name": "Gaming",
-      "images": [{ "url": "", "caption": "" }],
       "description": "I'm PCMR so yeah, I do gaming on it (mostly). Sometime its just a simple game to relax such as solidarity or minesweeper, sometime I do harcore like DMC or Battlefield (no much for now)."
     }
   ],
@@ -46,7 +46,7 @@
     {
       "name": "TS",
       "image": "https://www.svgrepo.com/show/354478/typescript-icon.svg",
-      "description": "I love JS, and I spend lots of time to understand it, and from there I learn the pros and cons of JS. From the perspective of a strict OOP learner at that time, JS has countless cons to me. And thats where TypeScript come in and solve it for me. It does not like 100% fixing everything, but some major problem is solve, and I love the way Microsoft really listen to the developer to improve and enhance it. At least until now I'm still TypeScript-ing everyday",
+      "description": "I love JS, and I spent lots of time to understand it, and from there I learn the pros and cons of JS. From the perspective of a strict OOP learner at that time, JS has countless cons to me. And thats where TypeScript come in and solve it for me. It does not like 100% fixing everything, but some major problem is solve, and I love the way Microsoft really listen to the developer to improve and enhance it. At least until now I'm still TypeScript-ing everyday",
       "priority": true
     },
     {

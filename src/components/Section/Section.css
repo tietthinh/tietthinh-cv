@@ -2,11 +2,12 @@ section {
 }
 
 section .content {
-  transition: max-height 1000ms ease-in;
+  transition: max-height 300ms ease-in;
   overflow: hidden;
   max-height: 0;
 }
 
 section .content.expand {
-  max-height: 9999px;
+    transition: max-height 1000ms ease-in;
+    max-height: 9999px;
 }
