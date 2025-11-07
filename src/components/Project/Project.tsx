@@ -1,32 +1,18 @@
 "use client";
 
-import "./Project.css";
 import type { ProjectsProps, Project } from "@/types";
 import Image from "next/image";
 import { buildDurationText, formatDate, getDuration } from "../helper";
 import { Tag } from "../Tag/Tag";
-import { PropsWithChildren, ReactNode } from "react";
+import { ReactNode, useState } from "react";
 import { Section } from "../Section/Section";
-
-const Bracket: React.FC<{ span: number }> = ({ span = 1 }) => {
-  return (
-    <>
-      <span
-        style={{ transform: `scaleY(${span > 1 ? 1.04 * span : 1})` }}
-        className="transform text-[435px] leading-[285px] w-50 h-95 text-right"
-      >
-        {"{"}
-      </span>
-    </>
-  );
-};
-
-const Title: React.FC<PropsWithChildren> = ({ children }) => {
-  return <span className="font-bold underline">{children}:</span>;
-};
-const Value: React.FC<PropsWithChildren> = ({ children }) => {
-  return <span className="ml-2 font-medium">{children}</span>;
-};
+import {
+  projectByCompanyTimeline,
+  sortByEndTime,
+  sortByStartTime,
+} from "./Project.helper";
+import { Bracket } from "./Bracket";
+import { ArrowLongDownIcon, ArrowLongUpIcon } from "@heroicons/react/24/solid";
 
 const FieldValue: React.FC<{ title: string; value: ReactNode }> = ({
   title,
@@ -34,8 +20,8 @@ const FieldValue: React.FC<{ title: string; value: ReactNode }> = ({
 }) => {
   return (
     <p className="py-1.5">
-      <Title>{title}</Title>
-      <Value>{value}</Value>
+      <span className="font-bold underline">{title}:</span>
+      <span className="ml-2 font-medium">{value}</span>
     </p>
   );
 };
@@ -55,7 +41,7 @@ const Project: React.FC<Project> = ({
   const start = formatDate(timeStart);
   const end = formatDate(timeEnd);
   const durationText = buildDurationText(getDuration(timeStart, timeEnd));
-  // border-l-8 border-l-yellow-500 dark:border-l-yellow-300
+
   return (
     <div className="mb-5 xl:h-95 max-w-200 min-h-90 box-border">
       <div className="border border-white rounded-lg p-3 xl:h-95">
@@ -99,62 +85,45 @@ const Project: React.FC<Project> = ({
 };
 
 export const Projects: React.FC<ProjectsProps> = ({ projectProps }) => {
-  const data = projectProps.sort((p, n) => {
-    const aDate = new Date(p.timeStart).getTime();
-    const bDate = new Date(n.timeStart).getTime();
-    return aDate - bDate;
-  });
+  const [sortMode, setSortMode] = useState<"asc" | "desc">("desc");
 
-  const companyMap = data.reduce((result, project) => {
-    const findCompanyIndex = result.findIndex(
-      (e) => e.name === project.company
-    );
-    if (findCompanyIndex > -1) {
-      result[findCompanyIndex].span += 1;
+  const sortMethod = sortMode === "asc" ? sortByStartTime : sortByEndTime;
 
-      const prevTimeStart = new Date(result[findCompanyIndex].timeStart);
-      const nextTimeStart = new Date(project.timeStart);
-      let prevTimeEnd = new Date();
-      let nextTimeEnd = prevTimeEnd;
-      if (result[findCompanyIndex].timeEnd && project.timeEnd) {
-        prevTimeEnd = new Date(result[findCompanyIndex].timeEnd);
-        nextTimeEnd = new Date(project.timeEnd);
-      }
+  const toggleSortMode = () => {
+    setSortMode((prev) => (prev === "asc" ? "desc" : "asc"));
+  };
 
-      if (prevTimeStart.getTime() > nextTimeStart.getTime()) {
-        result[findCompanyIndex].timeStart = project.timeStart;
-      }
-
-      if (nextTimeEnd.getTime() > prevTimeEnd.getTime()) {
-        result[findCompanyIndex].timeEnd = project.timeEnd;
-      }
-    } else {
-      result.push({
-        name: project.company,
-        logo: project.companyLogo,
-        timeStart: project.timeStart,
-        timeEnd: project.timeEnd,
-        span: 1,
-      });
-    }
-
-    return result;
-  }, [] as { name: string; logo: string; span: number; timeStart: string; timeEnd: string | null }[]);
+  const data = projectProps.sort(sortMethod);
+  const companyMap = projectByCompanyTimeline(data);
 
   return (
     <Section title="Projects" titleCaption="My working history" collapsible>
+      <button
+        className="mb-10 p-2 border-white border-2 rounded-2xl cursor-pointer"
+        onClick={toggleSortMode}
+      >
+        Sort{" "}
+        {sortMode === "asc" ? (
+          <ArrowLongUpIcon className="inline-block" width={24} height={24} />
+        ) : (
+          <ArrowLongDownIcon className="inline-block" width={24} height={24} />
+        )}
+      </button>
       <div className="justify-center flex">
         <div className="timeline border-l-10 rounded-t-lg mb-5 xl:border-l-yellow-300 mr-10 flex-col hidden xl:flex">
-          {companyMap.map((company) => (
+          {companyMap.map((company, idx) => (
             <div
               key={company.name}
-              className={`flex items-center justify-between basis-${
-                400 * company.span
+              style={{
+                flexBasis: `${400 * company.span - 20}px`,
+              }}
+              className={`flex items-center justify-between ${
+                idx > 0 ? "mt-5" : ""
               }`}
             >
               <div className="flex items-center">
                 <Image
-                  className="ml-10"
+                  className="ml-10 border-white border"
                   src={company.logo}
                   alt={company.name}
                   width={80}
@@ -165,7 +134,8 @@ export const Projects: React.FC<ProjectsProps> = ({ projectProps }) => {
                   <h3 className="text-3xl">{company.name}</h3>
                   <h4 className="">
                     {formatDate(company.timeStart)} -{" "}
-                    {formatDate(company.timeEnd)} (
+                    {formatDate(company.timeEnd)}
+                    <br />(
                     {buildDurationText(
                       getDuration(company.timeStart, company.timeEnd)
                     )}
@@ -173,19 +143,17 @@ export const Projects: React.FC<ProjectsProps> = ({ projectProps }) => {
                   </h4>
                 </div>
               </div>
-              <div className="flex h-100">
-                <Bracket span={company.span} />
+              <div className="flex items-end h-full">
+                <Bracket />
               </div>
             </div>
           ))}
         </div>
-        {/* <ul className="grid xs:grid-cols-1 xl:grid-cols-2 gap-5"> */}
         <div>
           {data.map((project) => (
             <Project key={project.name} {...project} />
           ))}
         </div>
-        {/* </ul> */}
       </div>
     </Section>
   );
