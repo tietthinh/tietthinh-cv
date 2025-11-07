@@ -13,27 +13,27 @@
     {
       "id": "1",
       "name": "Motorcycle Riding",
-      "description": "I love to ride, research and spend time to maintain my motorcycle. Sometime just a simple coffee time with my friend talking about bike"
+      "description": "I have a deep passion for motorcycles—riding them, researching new models and technologies, and spending time maintaining my own. Whether it's tuning the engine, cleaning every detail, or upgrading parts, I find joy in every aspect of bike care. Sometimes, it's as simple as grabbing a coffee with a friend and chatting about bikes—sharing stories, discussing modifications, or dreaming about our next ride."
     },
     {
       "id": "2",
       "name": "Photography",
-      "description": "Just recently, I'm still an amateur, I have a Canon 77D and a Insta360 Ace Pro, not a really good one but still serve me well."
+      "description": "I've just recently started exploring photography and videography, and I'm still very much an amateur. I currently use a Canon 77D and an Insta360 Ace Pro. They may not be top-of-the-line gear, but they serve me well and have helped me learn a lot."
     },
     {
       "id": "3",
       "name": "Touring",
-      "description": "Sometime I would spend the weekend in some place with sea or mountain view for a BBQ party with my friend or sometime just a simple cup of coffee - of course with my motorcycle"
+      "description": "Sometimes, I spend my weekends in scenic places with sea or mountain views—perfect settings for a BBQ party with friends. Other times, it's just a quiet moment over a cup of coffee, enjoying the fresh air and good company. And of course, my motorcycle is always part of the journey—whether it's the ride that gets me there or the companion that makes the moment complete."
     },
     {
       "id": "4",
       "name": "PCMR",
-      "description": "Its not really about gaming, I really like searching for parts or learn how to assemble the whole PC myself."
+      "description": "It's not really about gaming for me—I genuinely enjoy searching for PC parts and learning how to assemble an entire system from scratch. The process of picking the right components, understanding how they work together, and building something functional and powerful is what excites me most."
     },
     {
       "id": "5",
       "name": "Gaming",
-      "description": "I'm PCMR so yeah, I do gaming on it (mostly). Sometime its just a simple game to relax such as solidarity or minesweeper, sometime I do harcore like DMC or Battlefield (no much for now)."
+      "description": "I'm part of the PC Master Race, so yeah—I mostly game on my rig. Sometimes it's just something simple to relax, like Solitaire or Minesweeper. Other times, I dive into more intense titles like Devil May Cry or Battlefield. I haven't been playing as much lately, but I still enjoy the thrill of a good challenge when I get the chance, just like coding, I always like to challenge myself"
     }
   ],
   "skills": [
@@ -46,25 +46,25 @@
     {
       "name": "TS",
       "image": "https://www.svgrepo.com/show/354478/typescript-icon.svg",
-      "description": "I love JavaScript and have spent a lot of time understanding it. Through that journey, I’ve learned its pros and cons. From the perspective of a strict OOP learner back then, JavaScript had countless drawbacks for me. That’s where TypeScript came in and helped solve many of those issues. It doesn’t fix everything, but it addresses some major problems—and I really appreciate how Microsoft listens to developers to continuously improve and enhance it. Even now, I still use TypeScript every day.",
+      "description": "I love JavaScript and have spent a lot of time understanding it. Through that journey, I've learned its pros and cons. From the perspective of a strict OOP learner back then, JavaScript had countless drawbacks for me. That's where TypeScript came in and helped solve many of those issues. It doesn't fix everything, but it addresses some major problems—and I really appreciate how Microsoft listens to developers to continuously improve and enhance it. Even now, I still use TypeScript every day.",
       "priority": true
     },
     {
       "name": "Angular",
       "image": "https://www.svgrepo.com/show/353396/angular-icon.svg",
-      "description": "My first-ever JS framework, JS was a plain interpret script so when the first time I'm getting used to AngularJS its was a heaven, for the first time its has a rule to follow, a concept to develop. Then come angular 2, my heaven was upgraded with OOP-like concept. Although I'm not working with it as much as I used to but still love the concept, the capable, how it can scale up the application.",
+      "description": "My first-ever JavaScript framework was AngularJS. Before that, JavaScript was just a plain interpreted script to me. So when I first started using AngularJS, it felt like heaven—it introduced rules to follow and concepts to develop around. Then came Angular 2, and my heaven was upgraded with object-oriented programming-like features. Although I don't work with it as much as I used to, I still love the concept, its capabilities, and how well it can scale an application.",
       "priority": true
     },
     {
       "name": "React",
       "image": "https://www.svgrepo.com/show/355190/reactjs.svg",
-      "description": "2017 is the first time I use ReactJS, still JS but I managed to learn the concept, the code flow. I also learn about state-management concept and library like Redux, redux-observable (guess no one using it anymore). Since then I started to expand things, React native (I once was an Android developer too), React functional component,...",
+      "description": "In 2017, I used ReactJS for the first time. It was still JavaScript, but I managed to grasp the concepts and understand the code flow. I also learned about state management and libraries like Redux and redux-observable (though I guess no one really uses that one anymore). Since then, I've expanded my skills—exploring React Native (I was once an Android developer too), diving into React functional components, and much more.",
       "priority": true
     },
     {
       "name": "NodeJS",
       "image": "https://www.svgrepo.com/show/303266/nodejs-icon-logo.svg",
-      "description": "Same year 2017 I learnt NodeJS, learn about how it handle with workers, asynchronous block, etc. Later on I started working on ExpressJS, Kraken,... Ultimately NestJS, Angular-ish, but for Backend - with TypeScript of course.",
+      "description": "In the same year—2017—I learned NodeJS and explored how it handles workers, asynchronous operations, and non-blocking architecture. Later, I started working with frameworks like ExpressJS and Kraken. Eventually, I discovered NestJS, which felt like Angular for the backend—structured, scalable, and built with TypeScript, of course.",
       "priority": true
     },
     {
