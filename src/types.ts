@@ -57,6 +57,7 @@ export interface SkillsProps {
   skills: Skill[];
 }
 export interface SectionProps {
+  id?: string;
   onCollapse?: () => void;
   onExpand?: () => void;
   title: string;

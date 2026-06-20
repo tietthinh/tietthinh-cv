@@ -33,7 +33,7 @@
     {
       "id": "5",
       "name": "Gaming",
-      "description": "I'm part of the PC Master Race, so yeah—I mostly game on my rig. Sometimes it's just something simple to relax, like Solitaire or Minesweeper. Other times, I dive into more intense titles like Devil May Cry or Battlefield. I haven't been playing as much lately, but I still enjoy the thrill of a good challenge when I get the chance, just like coding, I always like to challenge myself"
+      "description": "I'm part of the PC Master Race, so yeah—I mostly game on my rig. Sometimes it's just something simple to relax, like Solitaire or Minesweeper. Other times, I dive into more intense titles like Devil May Cry or Battlefield. I haven't been playing as much lately, but I still enjoy the thrill of a good challenge when I get the chance. Just like with coding, I always like to push myself."
     }
   ],
   "skills": [
@@ -70,7 +70,7 @@
     {
       "name": "GraphQL",
       "image": "https://www.svgrepo.com/show/353834/graphql.svg",
-      "description": "Its not gonna replace REST API!",
+      "description": "It's not going to replace REST APIs!",
       "priority": true
     }
   ],
@@ -166,7 +166,7 @@
       "domain": ["Banking", "Payment Services"],
       "company": "NashTech",
       "companyLogo": "https://media.licdn.com/dms/image/v2/D4E0BAQH2XkGtzxSbvg/company-logo_200_200/company-logo_200_200/0/1720166077022/nashtech_global_logo?e=1763596800&v=beta&t=6u2Cc2OCVpm3_YHDUl23XYD5oEaIvqZrt_Ljf7wRoU8",
-      "description": "Work with HK team on banking system which focusing on payment service such as cash transfer, bill payment",
+      "description": "Worked with the Hong Kong team on a banking system focused on payment services such as cash transfers and bill payments.",
       "techstack": ["React Native", "GraphQL"],
       "position": "Mobile Developer",
       "role": "Developed secure and intuitive payment, money transfer workflows."
@@ -202,7 +202,7 @@
       "domain": ["Banking"],
       "company": "NAB Innovation Center Vietnam",
       "companyLogo": "https://media.licdn.com/dms/image/v2/D560BAQEpfH1XRQvlXQ/company-logo_200_200/B56Zg0mZ6gG4AM-/0/1753229140372/nab_logo?e=1763596800&v=beta&t=pD0vbQBfHiottu8f7wn7SZqVrQHHzffyy8dydlS1nb4",
-      "description": "Working with Australian team to maintains legacy banking applications and develops new micro-frontend miniapps for seamless customer experience.",
+      "description": "Worked with the Australian team to maintain legacy banking applications and develop new micro-frontend mini-apps for a seamless customer experience.",
       "techstack": [
         "React",
         "Jest",
