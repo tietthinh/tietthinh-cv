@@ -4,6 +4,7 @@ import type { Hobby, HobbyProps } from "@/types";
 import Image from "next/image";
 import { Section } from "../Section/Section";
 import { MouseEventHandler, useCallback, useState } from "react";
+import { StarMark } from "../Decor/StarMark";
 
 const Hobby: React.FC<Hobby> = ({ description, images, name }) => {
   const [dragging, setDragging] = useState(false);
@@ -11,7 +12,7 @@ const Hobby: React.FC<Hobby> = ({ description, images, name }) => {
   const [originPosition, setOriginPosition] = useState(0);
   const handleDragging: MouseEventHandler<HTMLUListElement> = useCallback(
     (container) => {
-      setDragging(true); 
+      setDragging(true);
       setDraggingPosition(container.clientX);
       setOriginPosition(container.target.scrollLeft);
     },
@@ -31,33 +32,38 @@ const Hobby: React.FC<Hobby> = ({ description, images, name }) => {
   }, []);
 
   return (
-    <li className="flex flex-col">
-      <h2 className="text-2xl mb-3">{name}</h2>
-      <p className="mb-3">{description}</p>
-      <ul
-        onMouseDown={handleDragging}
-        onMouseMove={handleScrolling}
-        onMouseOut={handleRelease}
-        onMouseUp={handleRelease}
-        className={`overflow-x-auto mb-10 whitespace-nowrap [scrollbar-width:none] [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] ${
-          dragging ? "cursor-grabbing" : "cursor-grab"
-        }`}
-      >
-        {images.map((img, idx) => (
-          <li
-            key={idx}
-            className="inline-block mx-1 pointer-events-none select-none"
-          >
-            <Image
-              alt={`${idx}`}
-              src={img}
-              height={2000}
-              width={2000}
-              className="object-cover h-50 w-auto"
-            />
-          </li>
-        ))}
-      </ul>
+    <li className="flex flex-col rounded-2xl border border-line bg-surface/40 p-5 transition-colors duration-300 hover:border-crimson/50">
+      <h3 className="mb-2 flex items-center gap-2.5 font-display text-2xl font-semibold text-cream">
+        <StarMark className="h-5 w-5 shrink-0 text-crimson" />
+        {name}
+      </h3>
+      <p className="mb-4 text-sm leading-relaxed text-ash">{description}</p>
+      {images.length > 0 && (
+        <ul
+          onMouseDown={handleDragging}
+          onMouseMove={handleScrolling}
+          onMouseOut={handleRelease}
+          onMouseUp={handleRelease}
+          className={`overflow-x-auto whitespace-nowrap [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden ${
+            dragging ? "cursor-grabbing" : "cursor-grab"
+          }`}
+        >
+          {images.map((img, idx) => (
+            <li
+              key={idx}
+              className="pointer-events-none mr-2 inline-block select-none overflow-hidden rounded-xl border border-line"
+            >
+              <Image
+                alt={`${name} ${idx + 1}`}
+                src={img}
+                height={2000}
+                width={2000}
+                className="h-52 w-auto object-cover"
+              />
+            </li>
+          ))}
+        </ul>
+      )}
     </li>
   );
 };
@@ -65,11 +71,12 @@ const Hobby: React.FC<Hobby> = ({ description, images, name }) => {
 export const Hobbies: React.FC<HobbyProps> = ({ hobbies }) => {
   return (
     <Section
+      id="hobbies"
       title="Hobbies"
-      titleCaption="Where you get to know more about me beside works"
+      titleCaption="Get to know me beyond work"
       collapsible
     >
-      <ul>
+      <ul className="grid gap-5">
         {hobbies.map((hobby) => (
           <Hobby key={hobby.name} {...hobby} />
         ))}

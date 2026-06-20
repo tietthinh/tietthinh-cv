@@ -1,13 +1,12 @@
-section {
-}
-
 section .content {
-  transition: max-height 300ms ease-in;
+  transition: max-height 320ms ease-in, opacity 320ms ease-in;
   overflow: hidden;
   max-height: 0;
+  opacity: 0;
 }
 
 section .content.expand {
-    transition: max-height 1000ms ease-in;
-    max-height: 9999px;
+  transition: max-height 900ms ease-in-out, opacity 600ms ease-in;
+  max-height: 12000px;
+  opacity: 1;
 }

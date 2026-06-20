@@ -1,18 +1,24 @@
+import { StarMark } from "../Decor/StarMark";
+
 export const Footer: React.FC = () => {
   return (
-    <footer className="w-full">
-      <div className="grid grid-cols-4 gap-2">
-        <span className="col-span-full">
-          For more information about this CV source code please visit GitHub
-          repo shown above
+    <footer className="flex w-full flex-col items-center gap-3 pb-4 text-center">
+      <StarMark className="h-5 w-5 text-crimson animate-glow" />
+      <p className="max-w-xl text-sm text-ash">
+        For more information about this CV&apos;s source code, please visit the
+        GitHub repository linked above.
+      </p>
+      <p className="text-sm text-ash">
+        Crafted with{" "}
+        <span className="font-semibold text-cream">React</span> &amp;{" "}
+        <span className="font-semibold text-cream">Next.js</span> by{" "}
+        <span className="font-display font-semibold text-crimson">
+          Thinh Tran
         </span>
-        <span className="col-span-full">
-          Developed with ReactJS, Next.JS by Thinh Tran
-        </span>
-        <span className="col-span-full text-right">
-          @ {new Date().getFullYear()}
-        </span>
-      </div>
+      </p>
+      <p className="text-xs uppercase tracking-[0.2em] text-ash-dim">
+        © {new Date().getFullYear()}
+      </p>
     </footer>
   );
 };
