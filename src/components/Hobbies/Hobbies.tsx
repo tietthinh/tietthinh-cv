@@ -32,7 +32,7 @@ const Hobby: React.FC<Hobby> = ({ description, images, name }) => {
   }, []);
 
   return (
-    <li className="flex flex-col rounded-2xl border border-line bg-surface/40 p-5 transition-colors duration-300 hover:border-crimson/50">
+    <li className="flex flex-col rounded-2xl border border-line bg-surface/40 p-5 transition-colors duration-300 hover:border-crimson/50 break-inside-avoid">
       <h3 className="mb-2 flex items-center gap-2.5 font-display text-2xl font-semibold text-cream">
         <StarMark className="h-5 w-5 shrink-0 text-crimson" />
         {name}
@@ -44,7 +44,7 @@ const Hobby: React.FC<Hobby> = ({ description, images, name }) => {
           onMouseMove={handleScrolling}
           onMouseOut={handleRelease}
           onMouseUp={handleRelease}
-          className={`overflow-x-auto whitespace-nowrap [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden ${
+          className={`hobby-gallery overflow-x-auto whitespace-nowrap [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden ${
             dragging ? "cursor-grabbing" : "cursor-grab"
           }`}
         >

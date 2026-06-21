@@ -8,7 +8,7 @@ const links = [
 
 export const Nav: React.FC<{ github: string }> = ({ github }) => {
   return (
-    <header className="fixed inset-x-0 top-0 z-40 border-b border-line/70 bg-ink/70 backdrop-blur-md">
+    <header className="fixed inset-x-0 top-0 z-40 border-b border-line/70 bg-ink/70 backdrop-blur-md print:hidden">
       <nav className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-5 py-3 sm:px-8">
         <a
           href="#top"

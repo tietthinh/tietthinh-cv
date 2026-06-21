@@ -123,3 +123,91 @@ body {
     scroll-behavior: auto;
   }
 }
+
+/* ----------------------------------------------------------------------
+   Print mode — a clean, ink-friendly light rendering of the CV.
+   The theme is variable-driven, so remapping the tokens here flips the
+   whole palette to light while keeping the crimson accents.
+   ---------------------------------------------------------------------- */
+@media print {
+  :root {
+    --color-ink: #ffffff;
+    --color-ink-2: #ffffff;
+    --color-surface: #ffffff;
+    --color-surface-2: #ffffff;
+    --color-line: #ddd2ca;
+    --color-line-strong: #c7b8ae;
+
+    --color-cream: #1b1513; /* primary text turns near-black */
+    --color-ash: #463f3a; /* muted text turns dark grey */
+    --color-ash-dim: #6c625b;
+    /* crimson tokens stay as-is for accents */
+  }
+
+  html,
+  body {
+    background: #ffffff !important;
+    background-image: none !important;
+    color: #1b1513 !important;
+    /* keep crimson accents on paper */
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* No shadows, glows or entrance animations on paper */
+  *,
+  *::before,
+  *::after {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  .animate-rise,
+  .animate-glow {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  /* Force every collapsible section fully open, regardless of state */
+  section .content,
+  section .content.expand {
+    max-height: none !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+    transition: none !important;
+  }
+
+  /* Avoid awkward height locks / clipping on cards */
+  .project-card {
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+  }
+
+  /* Keep individual cards and headings intact across page breaks */
+  .break-inside-avoid {
+    break-inside: avoid;
+  }
+  h1,
+  h2,
+  h3 {
+    break-after: avoid;
+  }
+
+  /* Hobby galleries: let images tile instead of scrolling off-page */
+  .hobby-gallery {
+    overflow: visible !important;
+    white-space: normal !important;
+  }
+  .hobby-gallery > li {
+    white-space: normal !important;
+  }
+  .hobby-gallery img {
+    height: 8.5rem !important;
+  }
+
+  @page {
+    margin: 14mm;
+  }
+}
+

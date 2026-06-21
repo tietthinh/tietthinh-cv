@@ -23,7 +23,7 @@ export const StarDivider: React.FC<{ className?: string }> = ({
   className = "",
 }) => (
   <div
-    className={`flex items-center justify-center gap-4 my-14 ${className}`}
+    className={`flex items-center justify-center gap-4 my-14 print:my-6 ${className}`}
     aria-hidden="true"
   >
     <span className="h-px w-full max-w-xs bg-gradient-to-r from-transparent to-crimson/60" />
