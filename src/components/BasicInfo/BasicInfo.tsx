@@ -107,7 +107,7 @@ export const BasicInfo: React.FC<BasicInfoProps> = ({
             />
           </div>
 
-          <div className="mt-5 flex justify-center lg:justify-start">
+          <div className="mt-5 flex justify-center lg:justify-start print:hidden">
             <a
               target="_blank"
               rel="noopener noreferrer"
