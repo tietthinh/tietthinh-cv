@@ -14,7 +14,7 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
         {skills.map((skill) => (
           <li
             key={skill.name}
-            className="group relative overflow-hidden rounded-2xl border border-line bg-surface/40 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-crimson/60 hover:bg-surface hover:shadow-[0_24px_50px_-30px_rgba(200,16,46,0.65)]"
+            className="group relative overflow-hidden rounded-2xl border border-line bg-surface/40 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-crimson/60 hover:bg-surface hover:shadow-[0_24px_50px_-30px_rgba(200,16,46,0.65)] break-inside-avoid"
           >
             {/* Crimson edge that lights up on hover */}
             <span className="absolute inset-y-0 left-0 w-1 bg-crimson/40 transition-colors duration-300 group-hover:bg-crimson" />

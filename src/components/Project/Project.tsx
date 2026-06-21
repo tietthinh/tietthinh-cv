@@ -47,8 +47,8 @@ const Project: React.FC<Project> = ({
   const ongoing = timeEnd === null;
 
   return (
-    <div className="mb-5 box-border min-h-90 max-w-200 xl:h-95">
-      <div className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-surface/40 p-5 transition-all duration-300 hover:border-crimson/60 hover:bg-surface hover:shadow-[0_24px_50px_-30px_rgba(200,16,46,0.65)]">
+    <div className="project-card mb-5 box-border min-h-90 max-w-200 break-inside-avoid xl:h-95">
+      <div className="project-card group relative flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-surface/40 p-5 transition-all duration-300 hover:border-crimson/60 hover:bg-surface hover:shadow-[0_24px_50px_-30px_rgba(200,16,46,0.65)]">
         <span className="absolute inset-y-0 left-0 w-1 bg-crimson/40 transition-colors duration-300 group-hover:bg-crimson" />
 
         <div className="flex items-start justify-between gap-3">
@@ -125,7 +125,7 @@ export const Projects: React.FC<ProjectsProps> = ({ projectProps }) => {
       collapsible
     >
       <button
-        className="group mb-10 inline-flex items-center gap-2 rounded-full border border-crimson/40 bg-crimson/10 px-5 py-2.5 text-sm font-semibold text-cream transition-all duration-300 hover:border-crimson hover:bg-crimson"
+        className="group mb-10 inline-flex items-center gap-2 rounded-full border border-crimson/40 bg-crimson/10 px-5 py-2.5 text-sm font-semibold text-cream transition-all duration-300 hover:border-crimson hover:bg-crimson print:hidden"
         onClick={toggleSortMode}
       >
         Sort by date

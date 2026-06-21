@@ -53,7 +53,7 @@ export const Section: React.FC<PropsWithChildren<SectionProps>> = ({
 
         {collapsible && (
           <span
-            className={`mt-1 grid h-10 w-10 shrink-0 place-items-center rounded-full border border-line bg-surface/50 text-crimson transition-all duration-300 hover:border-crimson hover:bg-crimson hover:text-cream ${
+            className={`mt-1 grid h-10 w-10 shrink-0 place-items-center rounded-full border border-line bg-surface/50 text-crimson transition-all duration-300 hover:border-crimson hover:bg-crimson hover:text-cream print:hidden ${
               open ? "rotate-180" : ""
             }`}
           >

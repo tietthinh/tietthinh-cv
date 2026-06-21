@@ -36,7 +36,7 @@ export default async function Home() {
     >
       <Nav github={data.basicInfo.github} />
 
-      <main className="mx-auto w-full max-w-6xl px-5 pb-12 pt-24 sm:px-8 md:pb-20">
+      <main className="mx-auto w-full max-w-6xl px-5 pb-12 pt-24 sm:px-8 md:pb-20 print:pt-4">
         <div className="animate-rise">
           <BasicInfo basicInfo={data.basicInfo} />
         </div>
