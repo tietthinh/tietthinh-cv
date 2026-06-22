@@ -6,6 +6,7 @@ import { Hobbies } from "@/components/Hobbies/Hobbies";
 import { Skills } from "@/components/Skills/Skills";
 import { StarDivider } from "@/components/Decor/StarMark";
 import { Nav } from "@/components/Nav/Nav";
+import { PrintCV } from "@/components/PrintCV/PrintCV";
 import { list } from "@vercel/blob";
 import { Hobby } from "@/types";
 
@@ -30,29 +31,40 @@ export default async function Home() {
   const hobbies = await getHobbiesWithImg();
 
   return (
-    <div
-      id="top"
-      className="relative min-h-screen overflow-x-hidden font-open text-cream"
-    >
-      <Nav github={data.basicInfo.github} />
+    <>
+      {/* On-screen experience — hidden when printing */}
+      <div
+        id="top"
+        className="relative min-h-screen overflow-x-hidden font-open text-cream print:hidden"
+      >
+        <Nav github={data.basicInfo.github} />
 
-      <main className="mx-auto w-full max-w-6xl px-5 pb-12 pt-24 sm:px-8 md:pb-20 print:pt-4">
-        <div className="animate-rise">
-          <BasicInfo basicInfo={data.basicInfo} />
-        </div>
+        <main className="mx-auto w-full max-w-6xl px-5 pb-12 pt-24 sm:px-8 md:pb-20">
+          <div className="animate-rise">
+            <BasicInfo basicInfo={data.basicInfo} />
+          </div>
 
-        <StarDivider />
-        <Skills skills={data.skills} />
+          <StarDivider />
+          <Skills skills={data.skills} />
 
-        <StarDivider />
-        <Projects projectProps={data.projects} />
+          <StarDivider />
+          <Projects projectProps={data.projects} />
 
-        <StarDivider />
-        <Hobbies hobbies={hobbies} />
+          <StarDivider />
+          <Hobbies hobbies={hobbies} />
 
-        <StarDivider />
-        <Footer />
-      </main>
-    </div>
+          <StarDivider />
+          <Footer />
+        </main>
+      </div>
+
+      {/* Compact, print-only CV (1–2 pages) */}
+      <PrintCV
+        basicInfo={data.basicInfo}
+        skills={data.skills}
+        projects={data.projects}
+        hobbies={data.hobbies}
+      />
+    </>
   );
 }
