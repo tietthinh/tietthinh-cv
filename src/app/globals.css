@@ -149,8 +149,11 @@ body {
     break-inside: avoid;
   }
 
+  /* Margins are provided by the PrintCV page padding so they render
+     consistently even when a print pipeline strips @page margins. */
   @page {
-    margin: 11mm 12mm;
+    size: A4;
+    margin: 0;
   }
 }
 
